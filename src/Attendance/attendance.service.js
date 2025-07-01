@@ -4,7 +4,8 @@ const { userModal } = require("../Users/users.modal")
 
 module.exports = {
     insertAttendance,
-    retriveDatas
+    retriveDatas,
+    // filterDatas
 }
 
 // save attendance
@@ -35,3 +36,17 @@ async function retriveDatas(params) {
         return {status:500,message:"Error retrieving attendance records",data:error};
     }
 }
+
+// filter datas
+// async function filterDatas(params){
+//     try {
+//         const {year,month,days,userid} = params;
+//         console.log("called");
+        
+//         // 12/6/2025
+//         const attendance = await attendanceModal.find({userid:userid})
+//         console.log("attendance filter: ", attendance);
+//     } catch (error) {
+
+//     }
+// }

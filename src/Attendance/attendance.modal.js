@@ -10,7 +10,8 @@ const attendanceSchema = new Schema({
     absent: { type: Number, required: true },
     weekend: { type: Number, required: true },
     reason: { type: String },
-    dateandtime: { type: String, required: true },
+    date: { type: String, required: true },
+    time: { type: String, required: true },
     month: { type: String, required: true },
     createdat: { type: Date, default: Date.now },
     updatedat: { type: Date, default: Date.now }

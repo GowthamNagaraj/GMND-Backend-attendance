@@ -21,6 +21,7 @@ db.connectDb();
 // api
 app.use("/GMND/api/users", require("./src/routes/users.routes"));
 app.use("/GMND/api/attendance", require("./src/routes/attendance.routes"));
+app.use("/GMND/api/downloadRecords", require("./src/exports/exports"));
 
 const PORT = process.env.PORT || 2000;
 
