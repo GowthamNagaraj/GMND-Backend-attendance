@@ -19,7 +19,7 @@ router.get('/download',async (req,res) => {
 
         // console.log("filter.dateandtime: ",filter.dateandtime)
 
-        // const records = await Attendance.attendanceModal.find(filter).lean();
+        // const records = await Attendance.attendanceModal.find(filter);
 
         // console.log("records: ",records);
         
@@ -27,6 +27,10 @@ router.get('/download',async (req,res) => {
         //     return res.status(404).send("No data found for the selected filters");
         // }
 
+        // get data
+        // const records = await Attendance.attendanceModal.find();
+        // console.log("records: ",records);
+        
         // // create excell
         // const workbook = new exceljs.Workbook();
         // const worksheet = workbook.addWorksheet('Attendance');
@@ -47,6 +51,7 @@ router.get('/download',async (req,res) => {
         // await workbook.xlsx.write(res);
 
         // res.end();
+        res.send("testing purpose");
     } catch (error) {
         console.error('Excel export error:', err);
         res.status(500).send('Failed to export data to Excel');
